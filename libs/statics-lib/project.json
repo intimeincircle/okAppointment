@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/statics-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/statics-lib/dist",
+        "tsConfig": "libs/statics-lib/tsconfig.lib.json",
+        "project": "libs/statics-lib/package.json",
+        "entryFile": "libs/statics-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/statics-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/statics-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

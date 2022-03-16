@@ -1,0 +1,52 @@
+{
+  "name": "@lqiong/note",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:netlify": "cross-env NODE_ENV=development netlify dev",
+    "deploy": "cross-env NODE_ENV=development netlify deploy",
+    "deploy:prod": "cross-env NODE_ENV=production netlify deploy --prod"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.9",
+    "@chakra-ui/styled-system": "^2.3.1",
+    "@milkdown/core": "^6.3.0",
+    "@milkdown/plugin-clipboard": "^6.3.0",
+    "@milkdown/plugin-diagram": "^6.3.0",
+    "@milkdown/plugin-history": "^6.3.0",
+    "@milkdown/plugin-listener": "^6.3.0",
+    "@milkdown/plugin-slash": "^6.3.0",
+    "@milkdown/plugin-upload": "^6.3.0",
+    "@milkdown/preset-commonmark": "^6.3.0",
+    "@milkdown/prose": "^6.3.0",
+    "@milkdown/react": "^6.3.0",
+    "@milkdown/theme-tokyo": "^6.3.0",
+    "@milkdown/theme-nord": "^6.4.1",
+    "@milkdown/utils": "^6.3.0",
+    "classnames": "^2.3.1",
+    "next": "^12.3.0",
+    "prosemirror-commands": "^1.3.0",
+    "prosemirror-model": "^1.18.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^1.3.0"
+  },
+  "devDependencies": {
+    "next-transpile-modules": "^9.0.0",
+    "@types/node": "^18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.20.0",
+    "eslint-config-next": "^12.2.2",
+    "typescript": "^4.7.4"
+  },
+  "keywords": [],
+  "author": "josefaidt <josef.aidt@gmail.com>",
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "next/core-web-vitals"
+  }
+}

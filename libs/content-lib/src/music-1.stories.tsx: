@@ -1,0 +1,20 @@
+import 'react-jinke-music-player/assets/index.css';
+
+import type { FunctionComponent } from 'react';
+import React from 'react';
+import { memo } from 'react';
+import ReactJkMusicPlayer from 'react-jinke-music-player';
+
+export const AudioPlayerComponentBBB: FunctionComponent = memo(() => {
+  return (
+    <ReactJkMusicPlayer
+      onAudioProgress={({ currentTime }) => {}}
+      audioLists={[
+        {
+          name: 'title',
+          musicSrc: 'http://www.xihakan.com/up/xihakan.mp3',
+        },
+      ]}
+    />
+  );
+});

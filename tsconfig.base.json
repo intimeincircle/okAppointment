@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "types": [
+      "vitest/globals"
+  ],
+    "paths": {
+      "@app/statics-lib": ["libs/statics-lib/src/index.ts"],
+      "@app/editor-lib": ["libs/editor-lib/src/index.ts"],
+      "@app/circle-api": ["libs/circle-api/index.ts"],
+      "@app/w3-api": ["libs/w3-api/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

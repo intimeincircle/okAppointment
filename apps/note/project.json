@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/note",
+  "projectType": "application",
+  "sourceRoot": "apps/note",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-script",
+        "options": {
+          "script": "build"
+        }
+      }
+  },
+  "implicitDependencies": ["statics-lib"]
+}

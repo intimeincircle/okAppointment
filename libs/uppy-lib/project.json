@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/uppy-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/uppy-lib/dist",
+        "tsConfig": "libs/uppy-lib/tsconfig.lib.json",
+        "project": "libs/uppy-lib/package.json",
+        "entryFile": "libs/uppy-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/uppy-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/uppy-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

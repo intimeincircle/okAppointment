@@ -1,0 +1,22 @@
+{
+  "name": "@app/icon-lib",
+  "version": "0.0.1",
+  "main": "./dist/index.cjs.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "dev:ladle": "ladle serve"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^18",
+    "@icon-park/react": "^1.4.2",
+    "prop-types": "^15.5.10",
+    "react-dom": "^18"
+  },
+  "peerDependencies": {
+    "@icon-park/react": "^1.4.2",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

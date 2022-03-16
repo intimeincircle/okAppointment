@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/chat-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/chat-lib/dist",
+        "tsConfig": "libs/chat-lib/tsconfig.lib.json",
+        "project": "libs/chat-lib/package.json",
+        "entryFile": "libs/chat-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/chat-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/chat-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

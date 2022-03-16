@@ -1,0 +1,40 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/kun",
+  "projectType": "application",
+  "sourceRoot": "apps/kun",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "vite:test"
+      }
+    },
+    "dev:remix": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "dev:remix"
+      }
+    },
+    "dev": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "dev"
+      }
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-script",
+        "options": {
+          "script": "build:remix"
+        }
+      },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "deploy:prod"
+      }
+    }
+  },
+  "implicitDependencies": ["statics-lib"]
+}

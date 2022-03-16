@@ -1,0 +1,13 @@
+{
+  "sourceRoot": "libs/quant-api/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "build"
+      }
+    }
+  }
+}

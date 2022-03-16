@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/editor-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/editor-lib/dist",
+        "tsConfig": "libs/editor-lib/tsconfig.lib.json",
+        "project": "libs/editor-lib/package.json",
+        "entryFile": "libs/editor-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/editor-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/editor-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

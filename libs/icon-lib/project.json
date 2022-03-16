@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/icon-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/icon-lib/dist",
+        "tsConfig": "libs/icon-lib/tsconfig.lib.json",
+        "project": "libs/icon-lib/package.json",
+        "entryFile": "libs/icon-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/icon-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/icon-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

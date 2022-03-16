@@ -1,0 +1,73 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nx dev:remix kun",
+    "deploy:kun": "nx deploy kun",
+    "deploy:yueleme": "nx deploy yueleme",
+    "build:note": "nx build note",
+    "dev:note": "nx dev note",
+    "dev:yueleme": "nx dev yueleme",
+    "build:statics": "nx build statics-lib",
+    "build:content": "nx build content-lib",
+    "build:kun": "nx build kun",
+    "build:yueleme": "nx build yueleme",
+    "build:icon": "nx build icon-lib",
+    "build:ui": "nx build ui-lib",
+    "build:api:yueleme": "nx build yueleme-api",
+    "build:api:circle": "nx build circle-api",
+    "build:api:oneone": "nx build oneone-api",
+    "build:api:quant": "nx build quant-api",
+    "ladle:chat": "nx dev:ladle chat-lib",
+    "ladle:uppy": "nx dev:ladle uppy-lib",
+    "ladle:static": "nx dev:ladle statics-lib",
+    "start": "nx start",
+    "storybook": "pnpm ladle serve",
+    "test": "nx run-many --target=test --all",
+    "dev": "nx run-many --target=dev --all",
+    "deploy": "nx run-many --target=deploy --all",
+    "build": "nx build",
+    "eslint:fix": "eslint --fix **/*.{ts,tsx}",
+    "build:all": "nx run-many --target=build --all",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "libs/*-lib/**/*.{ts,tsx}": ["eslint --fix","prettier --write"],
+    "apps/**/*.{ts,tsx}": ["eslint --fix","prettier --write"]
+  },
+  "private": true,
+  "dependencies": {
+    "husky": "^8.0.1",
+    "tslib": "^2.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.0.0",
+    "@nrwl/eslint-plugin-nx": "^14.5.10",
+    "@nrwl/jest": "14.1.5",
+    "@nrwl/linter": "14.1.5",
+    "@nrwl/nx-cloud": "14.0.3",
+    "@nrwl/react": "14.1.5",
+    "@nrwl/web": "14.1.5",
+    "@nrwl/workspace": "14.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.35.1",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.21.0",
+    "vitest": "latest",
+    "eslint-plugin-vitest": "latest",
+    "eslint-config-prettier": "^8.5.0",
+    "nx": "14.1.5",
+    "webpack": "5",
+    "@ladle/react": "latest"
+  },
+  "workspaces": [
+    "libs/*",
+    "apis/*"
+  ]
+}

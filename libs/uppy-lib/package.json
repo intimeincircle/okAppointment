@@ -1,0 +1,25 @@
+{
+  "name": "@app/uppy-lib",
+  "version": "0.0.1",
+  "main": "./dist/index.cjs.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "dev:ladle": "ladle serve"
+  },
+  "dependencies": {
+    "@uppy/file-input": "^3.0.0",
+    "@uppy/xhr-upload": "^3.0.1",
+    "@uppy/react": "^3.0.1",
+    "@uppy/core": "^3.0.1",
+    "@uppy/dashboard": "^3.0.1"
+  },
+  "devDependencies": {
+    "react": "^18",
+    "prop-types": "^15.5.10",
+    "react-dom": "^18"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

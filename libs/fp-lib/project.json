@@ -1,0 +1,34 @@
+{
+  "sourceRoot": "libs/fp-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/fp-lib/dist",
+        "tsConfig": "libs/fp-lib/tsconfig.lib.json",
+        "project": "libs/fp-lib/package.json",
+        "entryFile": "libs/fp-lib/src/index.ts",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/fp-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/fp-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
